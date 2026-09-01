@@ -1,0 +1,109 @@
+:root {
+  --bg-1: #96c2f9;
+  --bg-2: #101820;
+  --panel: #1b2027;
+  --panel-2: #131a21;
+  --screen: #dfe7ec;
+  --screen-text: #0d1014;
+  --number: #d7dfe6;
+  --number-text: #111821;
+  --operator: #ffb84d;
+  --operator-text: #1b1a17;
+  --utility: #9ab7c9;
+  --utility-text: #101820;
+  --equals: #7ed0ff;
+  --equals-text: #081a2b;
+  --shadow: rgba(0, 0, 0, 0.38);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at top, #1a2530 0%, var(--bg-1) 38%, var(--bg-2) 100%);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.p1 {
+  text-align: center;
+  color: rgb(242, 8, 8);
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.calculator {
+  width: min(92vw, 380px);
+  background: linear-gradient(180deg, #1f252d 0%, #171d24 100%);
+  border-radius: 32px;
+  padding: 18px 16px 16px;
+  box-shadow: 0 24px 45px var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.screen {
+  width: 100%;
+  height: 110px;
+  margin-bottom: 16px;
+  border: none;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #edf3f7 0%, #dfe7ec 100%);
+  color: var(--screen-text);
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  text-align: right;
+  padding: 20px 18px;
+  outline: none;
+  box-shadow: inset 0 4px 10px rgba(15, 21, 27, 0.12);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.btn {
+  border: none;
+  border-radius: 18px;
+  min-height: 68px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(180deg, #eef4f7 0%, #dfe6eb 100%);
+  color: var(--number-text);
+  transition: transform 0.12s ease, filter 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.08), 0 4px 10px rgba(0, 0, 0, 0.14);
+}
+
+.btn:hover {
+  filter: brightness(1.03);
+}
+
+.btn:active {
+  transform: translateY(2px) scale(0.99);
+}
+
+.btn-operator {
+  background: linear-gradient(180deg, #ffc76a 0%, #ffb84d 100%);
+  color: var(--operator-text);
+}
+
+.btn-utility {
+  background: linear-gradient(180deg, #b7d3e8 0%, #9ab7c9 100%);
+  color: var(--utility-text);
+  font-size: 1.2rem;
+}
+
+.btn-equals {
+  background: linear-gradient(180deg, #8edcfe 0%, #7ed0ff 100%);
+  color: var(--equals-text);
+  grid-row: span 2;
+}
+
+.btn-zero {
+  grid-column: span 2;
+}
