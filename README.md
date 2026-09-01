@@ -1,9 +1,12 @@
-### Simple DOM Based Calculator 
+## Simple DOM Based Calculator 
 
 ---------------------------------
 
-### System-
+## System-
 
-<b>HTML</b>
-<b>CSS</b>
-<b>JAVASCRIPT - DOM</b>
+#### <b>HTML</b>
+--------
+#### <b>CSS</b>
+--------
+#### <b>JAVASCRIPT - DOM</b>
+--------
